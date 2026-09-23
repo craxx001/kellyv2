@@ -19,7 +19,7 @@ API_KEY = os.getenv("API_KEY", "CRAXX")
 
 # IMPORTANT:
 # Set BOT_TOKEN as an environment variable on your hosting platform.
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8617664721:AAED06aKN2tL4Gn7awRxaCAO7mHXlm-8TR0")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8617664721:AAFqL5Wm7ggK6puxdMt970LZOhvMVHPgD7k")
 
 # Example: ADMIN_IDS=8853678390,123456789
 ADMIN_IDS = [
