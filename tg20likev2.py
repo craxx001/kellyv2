@@ -516,7 +516,7 @@ async def like_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
     keyboard = [
-        [InlineKeyboardButton("🔄 Get 220 Likes", url="https://t.me/princezz_bot?start")]
+        [InlineKeyboardButton("🔄 ɢᴇᴛ ᴍᴏʀᴇ ʟɪᴋᴇꜱ", url="https://t.me/princezz_bot?start")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
