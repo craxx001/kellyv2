@@ -497,7 +497,7 @@ async def like_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif status == 2:
         result = (
             "🚫 *Daily Limit Reached!*\n"
-            "━━━━━━━━━━━━━━━━━━━━━━\n"
+            "━━━━━━━━━━━━━━━━━━\n"
             f"👤 ɴᴀᴍᴇ: {player}\n"
             f"🆔 ᴜɪᴅ: {uid_resp}\n"
             f"🌏 ʀᴇɢɪᴏɴ: {region_resp}\n\n"
@@ -505,7 +505,7 @@ async def like_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"📈 ᴀғᴛᴇʀ: {before:,}\n"
             "❤️ ɢɪᴠᴇɴ: +0\n\n"
             "⌛ᴅᴀɪʟʏ ꜰʀᴇᴇ ʟɪᴋᴇꜱ ʟɪᴍɪᴛ ꜰᴏʀ ᴛʜɪꜱ ᴜɪᴅ ɪꜱ ꜰᴜʟʟ, ᴛʀʏ ᴀɢᴀɪɴ ᴀꜰᴛᴇʀ 𝟨 ʜᴏᴜʀꜱ.\n"
-            "━━━━━━━━━━━━━━━━━━━━━━"
+            "━━━━━━━━━━━━━━━━━━"
         )
 
     else:
@@ -516,7 +516,7 @@ async def like_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
     keyboard = [
-        [InlineKeyboardButton("🛒 BUY AUTOLIKES", url="https://t.me/princezz_bot")]
+        [InlineKeyboardButton("🔄 Get 220 Likes", url="https://t.me/princezz_bot?start")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
