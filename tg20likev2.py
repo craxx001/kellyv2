@@ -7,7 +7,24 @@ from datetime import datetime, date, time
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.request import HTTPXRequest
+import os
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain")
+        self.end_headers()
+        self.wfile.write(b"Bot is running")
+
+    def log_message(self, format, *args):
+        pass
+
+def start_web_server():
+    port = int(os.environ.get("PORT", 10000))
+    server = HTTPServer(("0.0.0.0", port), HealthHandler)
+    server.serve_forever()
 
 # ============================================================
 # CONFIGURATION
@@ -664,6 +681,7 @@ async def reset_midnight(context: ContextTypes.DEFAULT_TYPE):
 # ============================================================
 
 def main():
+    threading.Thread(target=start_web_server, daemon=True).start()
     if not BOT_TOKEN:
         raise RuntimeError(
             "BOT_TOKEN environment variable is missing."
